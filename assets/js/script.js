@@ -6,9 +6,15 @@ var fontWeight = ["100", "300", "400", "500", "700", "100", "300", "400", "500",
 $(document).ready(function(){
 	$("#about").hide();
 
+
+
 // startRefresh();
 // function startRefresh() {
-// 	setTimeout(startRefresh,5000);
+// 		setTimeout(startRefresh,100000);
+
+
+
+
 ver1id = Math.floor(Math.random() * 10);
 ver2id = Math.floor(Math.random() * 10);
 ver3id = Math.floor(Math.random() * 4);
@@ -42,8 +48,11 @@ function thisReality(){
 		$("#ver4").text(fontWeight[ver4id]);
 	}
 }
-
 thisReality();
+
+
+//}
+
 
 
 $( "#reality" ).click(function() {
@@ -51,16 +60,11 @@ $( "#reality" ).click(function() {
 	$("#reality").text("ABOUT");
 	$(".hide").hide();
 	$("#about").show();
-});
 
-$( "#reality" ).dblclick(function() {
+	$( "#reality" ).click(function() {
 
-	$("#reality").css("color","black");
-	$("body").css("overflow","scroll")
-	$("#about").css("color","black");
-	$("body").css("background","white");
-
+	location.reload();
 
 });
-//}
+});
 });
